@@ -19,6 +19,8 @@ public class StartButton : MonoBehaviour
     }
     public void TouchMainButton()
     {
+        CharacterDataManager.instance.characterNum = 0;
+        Data.instance.num = 1;
         Data.instance.save = false;
         audioSource.PlayOneShot(clip);
         Invoke("LoadStartScene", 0.5f);

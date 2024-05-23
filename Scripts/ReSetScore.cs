@@ -13,6 +13,8 @@ public class ReSetScore : MonoBehaviour
     }
     public void TouchReSetButton()
     {
+        CharacterDataManager.instance.characterNum = 0;
+        Data.instance.num = 1;
         PlayerPrefs.DeleteAll();
         audioSource.PlayOneShot(clip);
         Invoke("LoadStartScene", 0.5f);

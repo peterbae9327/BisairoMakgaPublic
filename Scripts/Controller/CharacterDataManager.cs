@@ -22,7 +22,7 @@ public class CharacterDataManager : MonoBehaviour
 
     public void SelectCharacter(int num)
     {
-        characterNum = num;
+        CharacterDataManager.instance.characterNum = num;
     }
 
     public void CreateCharacter()
